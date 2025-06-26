@@ -309,7 +309,7 @@ export default function ContactPage() {
           viewport={{ once: true }}
           className="text-center mt-20 bg-black text-white p-12 w-full rounded-2xl"
         >
-          <h2 className="text-3xl font-black mb-4 font-mono">READY_TO_COLLABORATE?</h2>
+          <h2 className="text-3xl font-black mb-4 font-mono">WORK_TOGETHER?</h2>
           <div className="w-16 h-1 bg-white mx-auto mb-6" />
           <p className="text-white/80 mb-8 max-w-2xl mx-auto font-light leading-relaxed font-mono">
             Whether you have a project idea, want to discuss technology, or are looking for a passionate engineering

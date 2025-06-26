@@ -431,7 +431,7 @@ export default function ExperiencePage() {
             className="bg-black text-white p-8 md:p-12 text-center rounded-lg"
           >
             <Users className="w-8 md:w-12 h-8 md:h-12 text-white mx-auto mb-4 md:mb-6" />
-            <h2 className="text-2xl md:text-3xl font-black mb-4 md:mb-6 font-mono">INTERESTED_IN_COLLABORATION?</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-4 md:mb-6 font-mono">GOT_AN_IDEA?</h2>
             <div className="w-12 md:w-16 h-1 bg-white mx-auto mb-6 md:mb-8" />
             <p className="text-white/80 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto font-mono leading-relaxed">
               I'm always open to discussing new opportunities, interesting projects, or connecting with fellow engineers
