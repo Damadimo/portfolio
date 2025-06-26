@@ -142,23 +142,23 @@ export default function HomePage() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-12 md:py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-black mb-6 font-mono">EXPERTISE</h2>
+            <h2 className="text-3xl md:text-6xl font-black mb-6 font-mono">EXPERTISE</h2>
             <div className="w-24 h-1 bg-white mx-auto mb-8" />
-            <p className="text-xl text-white/80 max-w-2xl mx-auto font-mono">
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-mono px-4">
               Combining academic excellence with real-world engineering experience
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: Code,
@@ -188,7 +188,7 @@ export default function HomePage() {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="group cursor-pointer"
               >
-                <div className="border-2 border-white/20 p-8 h-full hover:border-white transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] relative overflow-hidden">
+                <div className="border-2 border-white/20 p-6 md:p-8 h-full hover:border-white transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] relative overflow-hidden">
                   {/* Animated background on hover */}
                   <motion.div
                     className="absolute inset-0 bg-white/5"
@@ -198,15 +198,15 @@ export default function HomePage() {
                   />
 
                   <div className="relative z-10">
-                    <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-start justify-between mb-4 md:mb-6">
                       <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                        <skill.icon className="w-8 h-8 text-white" />
+                        <skill.icon className="w-6 md:w-8 h-6 md:h-8 text-white" />
                       </motion.div>
-                      <span className="text-6xl font-black text-white/10 group-hover:text-white/20 transition-colors font-mono">
+                      <span className="text-4xl md:text-6xl font-black text-white/10 group-hover:text-white/20 transition-colors font-mono">
                         0{index + 1}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 font-mono">{skill.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 font-mono">{skill.title}</h3>
                     <p className="text-white/70 leading-relaxed mb-4 font-mono text-sm">{skill.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {skill.skills.map((s) => (
@@ -224,7 +224,7 @@ export default function HomePage() {
       </section>
 
       {/* Interactive Terminal Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -233,14 +233,14 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-black text-green-400 p-6 font-mono text-sm border-2 border-black">
+            <div className="bg-black text-green-400 p-4 md:p-6 font-mono text-xs md:text-sm border-2 border-black">
               <div className="flex items-center mb-4">
                 <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-2 md:w-3 h-2 md:h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-2 md:w-3 h-2 md:h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <span className="ml-4 text-white">adam@portfolio</span>
+                <span className="ml-4 text-white text-xs md:text-sm">adam@portfolio</span>
               </div>
               <div className="space-y-2">
                 <div>
@@ -254,6 +254,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
                   viewport={{ once: true }}
+                  className="text-xs md:text-sm"
                 >
                   Computer Engineering student at University of Toronto. President's Scholar with 3.8 GPA.
                 </motion.div>
@@ -268,7 +269,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="grid grid-cols-2 md:grid-cols-3 gap-2 text-yellow-400"
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-yellow-400 text-xs md:text-sm"
                 >
                   {getTerminalProjectNames().map((projectName, index) => (
                     <motion.div
@@ -301,7 +302,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-16 md:py-20 pb-20 md:pb-32 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -310,21 +311,23 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-6 font-mono">LET'S_BUILD_SOMETHING</h2>
+            <h2 className="text-3xl md:text-5xl font-black mb-6 font-mono px-4">LET'S_BUILD_SOMETHING</h2>
             <div className="w-24 h-1 bg-white mx-auto mb-8" />
-            <p className="text-xl text-white/80 mb-12 font-mono leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 mb-12 font-mono leading-relaxed px-4">
               Always interested in discussing new technologies, collaborating on projects, or connecting with fellow
               engineers and developers.
             </p>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-white/90 px-8 py-4 text-lg font-mono font-bold border-2 border-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 group"
-              >
-                <Terminal className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                CONNECT
-              </Button>
-            </Link>
+            <div className="pb-8">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-white text-black hover:bg-white/90 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-mono font-bold border-2 border-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 group"
+                >
+                  <Terminal className="w-4 md:w-5 h-4 md:h-5 mr-2 group-hover:animate-pulse" />
+                  CONNECT
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

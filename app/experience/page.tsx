@@ -109,15 +109,15 @@ export default function ExperiencePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-12 md:py-20 pb-16 md:pb-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
-          <h1 className="text-5xl md:text-7xl font-black text-black mb-6 font-mono">EXPERIENCE</h1>
+          <h1 className="text-4xl md:text-7xl font-black text-black mb-6 font-mono">EXPERIENCE</h1>
           <div className="w-24 h-1 bg-black mx-auto mb-8" />
           <p className="text-xl text-black/70 max-w-3xl mx-auto leading-relaxed font-mono">
             Professional experience in software engineering, AI, and robotics at University of Toronto and industry.
@@ -148,7 +148,7 @@ export default function ExperiencePage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12 md:mb-20"
         >
           <div className="max-w-5xl mx-auto space-y-8">
             {experiences.map((exp, index) => (
@@ -272,7 +272,7 @@ export default function ExperiencePage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12 md:mb-20"
         >
           <h2 className="text-4xl font-black text-black mb-12 text-center font-mono">EDUCATION</h2>
           <div className="max-w-5xl mx-auto">
@@ -347,7 +347,7 @@ export default function ExperiencePage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12 md:mb-20"
         >
           <h2 className="text-4xl font-black text-black mb-12 text-center font-mono">SKILL_MATRIX</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -394,7 +394,7 @@ export default function ExperiencePage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12 md:mb-20"
         >
           <h2 className="text-4xl font-black text-black mb-12 text-center font-mono">CERTIFICATIONS</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -422,31 +422,33 @@ export default function ExperiencePage() {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-black text-white p-12 text-center"
-        >
-          <Users className="w-12 h-12 text-white mx-auto mb-6" />
-          <h2 className="text-3xl font-black mb-6 font-mono">INTERESTED_IN_COLLABORATION?</h2>
-          <div className="w-16 h-1 bg-white mx-auto mb-8" />
-          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto font-mono leading-relaxed">
-            I'm always open to discussing new opportunities, interesting projects, or connecting with fellow engineers
-            and industry professionals.
-          </p>
-          <Button
-            size="lg"
-            className="bg-white text-black hover:bg-white/90 px-8 py-4 text-lg font-mono font-bold border-2 border-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200"
-            asChild
+        <div className="pb-8 md:pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-black text-white p-8 md:p-12 text-center rounded-lg"
           >
-            <a href="/contact">
-              <ExternalLink className="w-5 h-5 mr-2" />
-              GET_IN_TOUCH
-            </a>
-          </Button>
-        </motion.div>
+            <Users className="w-8 md:w-12 h-8 md:h-12 text-white mx-auto mb-4 md:mb-6" />
+            <h2 className="text-2xl md:text-3xl font-black mb-4 md:mb-6 font-mono">INTERESTED_IN_COLLABORATION?</h2>
+            <div className="w-12 md:w-16 h-1 bg-white mx-auto mb-6 md:mb-8" />
+            <p className="text-white/80 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto font-mono leading-relaxed">
+              I'm always open to discussing new opportunities, interesting projects, or connecting with fellow engineers
+              and industry professionals.
+            </p>
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-white/90 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-mono font-bold border-2 border-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-200"
+              asChild
+            >
+              <a href="/contact">
+                <ExternalLink className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                GET_IN_TOUCH
+              </a>
+            </Button>
+          </motion.div>
+        </div>
       </div>
     </div>
   )

@@ -70,7 +70,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-12 md:py-20 pb-16 md:pb-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -202,12 +202,12 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-black text-white p-12 text-center rounded-lg"
+          className="bg-black text-white p-8 md:p-12 text-center rounded-lg mb-12"
         >
-          <Trophy className="w-12 h-12 text-white mx-auto mb-6" />
-          <h2 className="text-3xl font-black mb-6 font-mono">CURRENTLY_WORKING_ON</h2>
+          <Trophy className="w-8 md:w-12 h-8 md:h-12 text-white mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-black mb-6 font-mono px-4">CURRENTLY_WORKING_ON</h2>
           <div className="w-16 h-1 bg-white mx-auto mb-8" />
-          <div className="max-w-3xl mx-auto space-y-4 font-mono">
+          <div className="max-w-3xl mx-auto space-y-4 font-mono px-4">
             {currentProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -215,9 +215,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-center text-white/80 leading-relaxed"
+                className="flex items-start md:items-center text-white/80 leading-relaxed text-sm md:text-base"
               >
-                <project.icon className="w-6 h-6 text-white mr-3 flex-shrink-0" />
+                <project.icon className="w-5 md:w-6 h-5 md:h-6 text-white mr-3 flex-shrink-0 mt-0.5 md:mt-0" />
                 <span>{project.text}</span>
               </motion.div>
             ))}
