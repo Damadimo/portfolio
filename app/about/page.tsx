@@ -159,51 +159,19 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
-        {/* Values Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-4xl font-black text-black mb-12 text-center font-mono">CORE_VALUES</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <Card className="border-2 border-black/10 hover:border-black transition-all duration-300 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] h-full">
-                  <CardContent className="p-8">
-                    <div className="flex items-center mb-4">
-                      <value.icon className="w-8 h-8 text-black mr-4" />
-                      <h3 className="text-xl font-black text-black font-mono">
-                        {value.title.toUpperCase().replace(" ", "_")}
-                      </h3>
-                    </div>
-                    <p className="text-black/70 font-mono text-sm leading-relaxed">{value.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+  
 
+      </div>
 
-
-        {/* Current Status */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-black text-white p-8 md:p-12 text-center rounded-lg mb-12"
-        >
+      {/* Current Status - Full Width */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="bg-black text-white py-16 md:py-20 w-full"
+      >
+        <div className="container mx-auto px-4 text-center">
           <Trophy className="w-8 md:w-12 h-8 md:h-12 text-white mx-auto mb-6" />
           <h2 className="text-2xl md:text-3xl font-black mb-6 font-mono px-4">CURRENTLY_WORKING_ON</h2>
           <div className="w-16 h-1 bg-white mx-auto mb-8" />
@@ -222,8 +190,8 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </div>
   )
 }

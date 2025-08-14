@@ -63,7 +63,7 @@ export default function Navigation() {
                 <PixelLogo size={32} />
               </motion.div>
               <span className="text-black font-black text-xl tracking-tight font-mono group-hover:text-black/70 transition-colors">
-                DEV.PORTFOLIO
+                @Damadimo
               </span>
             </Link>
 

@@ -21,6 +21,25 @@ export default function ExperiencePage() {
   const experiences = [
     {
       title: "Software Engineering Intern",
+      company: "Data Passports",
+      period: "May 2025 - Sept. 2025",
+      location: "Toronto, ON",
+      type: "Internship",
+      description:
+        "Developed Privacy Advisor Agents to analyze and automate Privacy Rights Requests (GDPR, CCPA, etc.)",
+      achievements: [
+        "Launched LLAMA-based Python Privacy Advisor Agent using LangChain, sustaining 150+ req/s for over 10,000 users",
+        "Containerized and deployed Privacy Advisor Agent on Azure VM and Docker with CI/CD, using blue-green releases and health checks to keep sub-second p95 latency and enable zero-downtime rollouts. ",
+        "Implemented RAG pipeline to automate GDPR and CCPA compliance (Data Subject Access Request) generation through Privacy Advisor Agent, cutting average request time from 30 mins to 4 secs and raising submission volume 8-fold",
+        "Implemented data-protection guardrails with PII redaction, least-privilege Role Based Access Control, and Azure Monitor alerts, maintaining 100 percent compliance and 0 security incidents through 10,000 production runs",
+      ],
+      technologies: ["Python", "LangChain", "LLAMA", "Azure", "Docker", "CI/CD", "RAG", "GDPR", "CCPA"],
+      links: {
+        company: "https://datapassports.com/",
+      },
+    },
+    {
+      title: "Software Engineering Intern",
       company: "FI Solutions",
       period: "May 2025 - Sept. 2025",
       location: "Toronto, ON",
@@ -100,7 +119,7 @@ export default function ExperiencePage() {
   const handleResumeDownload = () => {
     // Download the PDF resume from the public folder
     const link = document.createElement("a")
-    link.href = "/Adam_Abdalla_Resume_S25f.pdf"
+    link.href = "/Adam_Abdalla_Resume.pdf"
     link.download = "Adam_Abdalla_Resume.pdf"
     document.body.appendChild(link)
     link.click()

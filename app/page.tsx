@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown, Code, Sparkles, Terminal, Zap } from "lucide-react"
+import { ArrowDown, Code, Download, Sparkles, Terminal, Zap } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { getTerminalProjectNames } from "@/lib/projects-data"
@@ -15,6 +15,16 @@ export default function HomePage() {
   ]
 
   const greetingText = "Hi, I'm Adam, a Computer Engineering student who loves building intelligent systems."
+
+  const handleResumeDownload = () => {
+    // Download the PDF resume from the public folder
+    const link = document.createElement("a")
+    link.href = "/Adam_Abdalla_Resume.pdf"
+    link.download = "Adam_Abdalla_Resume.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -99,26 +109,37 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 4.5 }}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
+              className="flex flex-col gap-4 sm:gap-6 justify-center items-center px-4"
             >
-              <Link href="/projects">
-                <Button
-                  size="lg"
-                  className="bg-black hover:bg-black/90 text-white px-8 py-4 text-lg font-mono font-bold border-2 border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 group"
-                >
-                  <Terminal className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                  VIEW_PROJECTS
-                </Button>
-              </Link>
-              <Link href="/experience">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-mono font-bold hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
-                >
-                  MY_EXPERIENCE
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+                <Link href="/projects">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-mono font-bold hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
+                  >
+                    <Terminal className="w-5 h-5 mr-2" />
+                    VIEW_PROJECTS
+                  </Button>
+                </Link>
+                <Link href="/experience">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg font-mono font-bold hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
+                  >
+                    MY_EXPERIENCE
+                  </Button>
+                </Link>
+              </div>
+              <Button
+                onClick={handleResumeDownload}
+                size="lg"
+                className="bg-black hover:bg-black/90 text-white px-8 py-4 text-lg font-mono font-bold border-2 border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 group"
+              >
+                <Download className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                DOWNLOAD_RESUME
+              </Button>
             </motion.div>
           </motion.div>
         </div>

@@ -153,7 +153,7 @@ portfolio-website/
 ### Content
 - **Personal Info**: Update content in respective page files (`app/about/page.tsx`, `app/experience/page.tsx`)
 - **Projects**: Modify `lib/projects-data.ts` to add/edit projects
-- **Resume**: Replace `public/Adam_Abdalla_Resume_S25f.pdf` with your resume
+- **Resume**: Replace `public/Adam_Abdalla_Resume.pdf` with your resume
 - **Images**: Update project images in `public/` directory
 
 ### Contact Form
